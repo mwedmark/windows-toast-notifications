@@ -57,6 +57,13 @@ namespace ToastNotifications
             base.Show();
         }
 
+        public void SetTitleAndBody(string newTitle, string newBody)
+        {
+            labelTitle.Text = newTitle;
+            labelBody.Text = newBody;
+            Refresh();
+        }
+        
         #endregion // Methods
 
         #region Event Handlers
@@ -115,22 +122,22 @@ namespace ToastNotifications
 
         private void lifeTimer_Tick(object sender, EventArgs e)
         {
-            Close();
+            Hide();
         }
 
         private void Notification_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
         }
 
         private void labelTitle_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
         }
 
         private void labelRO_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
         }
 
         #endregion // Event Handlers

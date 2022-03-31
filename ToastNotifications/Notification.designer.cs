@@ -41,16 +41,18 @@ namespace ToastNotifications
             // 
             // labelBody
             // 
-            this.labelBody.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelBody.BackColor = System.Drawing.Color.Transparent;
+            this.labelBody.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelBody.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBody.ForeColor = System.Drawing.Color.White;
-            this.labelBody.Location = new System.Drawing.Point(7, 29);
+            this.labelBody.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelBody.Location = new System.Drawing.Point(0, 0);
             this.labelBody.Name = "labelBody";
-            this.labelBody.Size = new System.Drawing.Size(236, 42);
+            this.labelBody.Size = new System.Drawing.Size(256, 120);
             this.labelBody.TabIndex = 0;
             this.labelBody.Text = "Body goes here and here and here and here and here";
-            this.labelBody.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelBody.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelBody.UseCompatibleTextRendering = true;
             this.labelBody.Click += new System.EventHandler(this.labelRO_Click);
             // 
             // labelTitle
@@ -72,7 +74,7 @@ namespace ToastNotifications
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(255, 80);
+            this.ClientSize = new System.Drawing.Size(256, 120);
             this.ControlBox = false;
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.labelBody);
@@ -90,7 +92,6 @@ namespace ToastNotifications
             this.Shown += new System.EventHandler(this.Notification_Shown);
             this.Click += new System.EventHandler(this.Notification_Click);
             this.ResumeLayout(false);
-
         }
 
         #endregion
